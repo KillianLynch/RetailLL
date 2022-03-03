@@ -1,289 +1,98 @@
-# LiveLabs Test Template 
-
-*About this template: This file is used to demonstrate all of the features built into the LiveLabs conversion engine. Many of the features described here are optional and are so marked. Start with the [Use the LiveLabs Lab Markdown Template](https://confluence.oraclecorp.com/confluence/display/DUASPG/Use+the+LiveLabs+Lab+Markdown+Template) Confluence page. Next, use the [LiveLabs Markdown Template What's New](https://confluence.oraclecorp.com/confluence/display/DUASPG/LiveLabs+Markdown+Template+What%27s+New) page.*
-
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the Steps to ...
+*This lab walks you through the Steps to better understand sales performance through visualizations that blend data from ERP, CX, and POS.*
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
-
-  [](youtube:zNKxJjkq0Pw)
-
-Estimated Time: -- minutes
-
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than to sections/paragraphs, please utilize the "Learn More" section.
+Estimated Time: 20 minutes
 
 ### Objectives
 
-*List objectives for the lab - if this is the intro lab, list objectives for the workshop*
+Today, we will be utilizing Oracle Analytics Server ability to pull cross-functional data together from across your entire business and to report on it in a single place, leveraging data sets and best practice KPIs. You can also extend the data model using any external data sources when utilizing governed, self-service, and augmented capabilities to run analysis. For the purpose of this lab, we will be highlighting its self-service capabilities by creating some visualizations.
 
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
-* [relative lab url test](?lab=need-help)
+* Create a Stacked Bar Chart
+* Create a Treemap
+* Create Tag Cloud
+* Create Bar Chart
+* Analyze Sentiment
 
-### Prerequisites (Optional)
-
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
+### Prerequisites
 
 This lab assumes you have:
 * An Oracle account
 * All previous labs successfully completed
+* Access to a data visualization instance
 
   > **Note:** If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
 
-*This is the "fold" - below items are collapsed by default*
+## Task 1: Create Stacked Bar Chart
 
-## Task 1: Standard LiveLabs Images and Text
+1. Let’s start by adding a new canvas. Click on the "+" icon at the bottom to create a new canvas. Let’s start visualizing!
 
-<!-- Images -->
+    ![](images/nc1.png)
 
-1. Standard method to include an image.
+2. First, let’s see how sales are split across the different channels within the "Underlying Dashboard Data 1."
 
-    ![](images/sample1.png)
+    ![Image alt text](images/1Step2.png")
 
-    The image alt text is optional.
+    * **Control select** "Sales – Channel by Quarter."
+    * **Select** Stacked Bar Chart
 
-    ![image alt text](images/sample1.png)
+3. Now we can see the sales broken down by each individual channel for the past couple of quarters. In Store and Delivery seem to be the biggest contributors to sales, but we need to investigate this further.
 
-2. Image with a link to the text description below it. This provides screen readers with an accessible way to "see" the image. The `sample1.txt` file must be added to the `files` folder.
+    ![Image alt text](images/1Step3.png")
 
-    ![Image alt text](images/sample1.png "Image title")
+4. Let's filter out the years that are not relevant to the visual by dragging Date(Quarter) to the filter tab and select quarters in 2020 - 2021.
 
-3. Inline image icon ![Image alt text](images/sample2.png) click **Navigation**.
+    ![Image alt text](images/1Step4.png")
 
-<!-- Text formatting -->
+  Now we have the correct stacked bar chart of sales by channel!
 
-4. One example with bold **text**.
 
-   If you add another paragraph, add 3 spaces before the beginning of the line to keep it in line with the numbered step.
+## Task 2: Create a Treemap
 
-5. Use tables sparingly:
+1. On the same dashboard, let's continue visualizing the dataset by inspecting the survey data that was collected on sales.
 
- | Column 1 | Column 2 | Column 3 |
- | --- | --- | --- |
- | 1 | Some text or a link | More text  |
- | 2 |Some text or a link | More text |
- | 3 | Some text or a link | More text |
+    ![Image alt text](images/2Step1.png")
 
-6. You can also include bulleted lists - make sure to indent 4 spaces:
+    * **Control select** "Menu Items by Survey Count," the same way we did previously and make sure Menu Items is under color.
+    * **Select** Treemap.
+    * Make sure to also drag Menu Items to color in order to color code the top responses.
 
-    - List item 1
-    - List item 2
+2. Now we have a visual that breaks down the different surveys we collect by menu items. We can see that our top 5 menu categories, where fries and hamburger meals top the list - not surprising as this QSR is known for their fries.
 
-7. Inline monospaced font is done with a single back ticks, for example `this is code`.
+    ![Image alt text](images/2Step2.png")
 
-8. Code blocks are identified by three back ticks, indented to align with the step:
+## Task 3: Create a Tag Cloud
 
-    ```
-    This is a code block.
-    ```
+1. From these survey responses, let's continue by inspecting the leading indicators of customer sentiment.
 
-9. Long code block with line breaks
+      ![Image alt text](images/3Step1.png")
 
-    ```
-    <copy>/* Specify the base URL that you copied from your files in OCI Object Storage in the define base_URL line below*/
-    /* change idthydc0kinr to your real namespace. The name is case-sensitive. */
-    /* change ADWCLab to your real bucket name. The name is case-sensitive. */
-    /* change us-phoenix-1 to your real region name. The name is case-sensitive. */
-    /* you can find these values on the OCI Console .. Storage .. Object Storage screen */
-    set define on
-    define base_URL='https://objectstorage.us-phoenix-1.oraclecloud.com/n/idthydc0kinr/b/ADWCLab/o'
+      * **Control select** "Survey Count by Actual Sentiment," the same way we did previously
+      * **Select** Tag Cloud.
+      * Make sure to also drag Actual Sentiment to color in order to color code the top responses.
 
-    /* copy Channels table */
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'CHANNELS',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/chan_v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
-     );
-    end;
-    /
+2. Now we have a visual that breaks down the top leading indicators of customer sentiment.
 
-    /* copy Countries table */
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'COUNTRIES',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/coun_v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
-     );
-    end;
-    /
+      ![Image alt text](images/3Step2.png")
 
-    /* Copy customers */
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'CUSTOMERS',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/cust1v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true', 'dateformat' value 'YYYY-MM-DD-HH24-MI-SS')
-     );
-    end;
-    /
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'SUPPLEMENTARY_DEMOGRAPHICS',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/dem1v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
-     );
-    end;
-    /
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'SALES',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/dmsal_v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true', 'dateformat' value 'YYYY-MM-DD')
-     );
-    end;
-    /
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'PRODUCTS',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/prod1v3.dat',
-        format => json_object('delimiter' value '|', 'quote' value '^', 'ignoremissingcolumns' value 'true', 'dateformat' value 'YYYY-MM-DD-HH24-MI-SS', 'blankasnull' value 'true')
-     );
-    end;
-    /
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'PROMOTIONS',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/prom1v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true', 'dateformat' value 'YYYY-MM-DD-HH24-MI-SS', 'blankasnull' value 'true')
-     );
-    end;
-    /
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'SALES',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/sale1v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true', 'dateformat' value 'YYYY-MM-DD', 'blankasnull' value 'true')
-     );
-    end;
-    /
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'TIMES',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/time_v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true', 'dateformat' value 'YYYY-MM-DD-HH24-MI-SS', 'blankasnull' value 'true')
-     );
-    end;
-    /
-    begin
-     dbms_cloud.copy_data(
-        table_name =>'COSTS',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'&base_URL/costs.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'dateformat' value 'YYYY-MM-DD', 'blankasnull' value 'true')
-     );
-    end;
-    /</copy>
-    ```
+## Task 4: Create a Bar Chart
 
-9. Use the copy function to allow your users to copy code snippets from LiveLabs into the clipboard.
+  1. Let's finish up by creating a simple bar chart to summarize our sentiment analysis.
 
-    ```
-  	<copy>Enclose the text you want to copy using the <copy> element.</copy>
-    ```
+      ![Image alt text](images/4Step1.png")
 
-10. Code snippets that include variables
+      * This time we will **control select** "Derived Sentiment by S-Counter," and select pick visualization.
+      * This will autonomously **select** a Bar Chart for us based on the metrics selected.
 
-  	```
-    <copy>ssh -i <ssh-key-file></copy>
-    ```
+  2. Now we have a visual that breaks down the different instances of each sentiment.
 
-11. Syntax highlighting examples
+      ![Image alt text](images/4Step2.png")
 
-    ```
-    <copy>select * from employees;</copy>
-    ```
-    Sample with line breaks:
+## Task 5: Analyze Sentiment
 
-    ```
-    <copy>class Simple{  
+  Customer survey responses are displayed on the bottom in two visualizations. The detail on the left showing the leading indicators of customer sentiment from the 1100 survey responses in the last week - fortunately, as we see on the right, the majority are positive or neutral, but there are negative responses mostly around long wait times and being out of fries, not good.  But, glad to see people prefer our cooking over their own.
 
-      public static void main(String args[]){  
+  ![Image alt text](images/HomePage.png")
 
-        System.out.println("Hello Java");  
-
-      }  
-
-    }</copy>
-    ```
-
-    ```
-    <copy>{  
-        "employee": {  
-            "name":       "sonoo",   
-            "salary":      56000,   
-            "married":    true  
-        }  
-    }</copy>
-    ```
-
-    ```
-    <copy># This program prints Hello, world!
-
-    print('Hello, world!')</copy>
-    ```
-
-12. You may want to turn highlighting off, to do so, use `nohighlight`:
-
-    ```nohighlight
-    <copy>class Simple{  
-      public static void main(String args[]){  
-        System.out.println("Hello Java");  
-      }  
-    }</copy>
-    ```
-
-## Task 2: Optional Advanced Features
-
-<!-- files -->
-
-1. Files that you want the reader to download:
-
-  When the file type is not recognized by the browser, you can use the following format.
-
-  > **Note:** _The filename must be in lowercase letters and CANNOT include any spaces._
-
-  Download the [starter SQL code](files/starter-file.sql).
-
-  When the file type is recognized by the browser, it will attempt to render it. So you can use the following format to force the download dialog box.
-
-  > **Note:** _The filename must be in lowercase letters and CANNOT include any spaces._
-
-  Download the [sample JSON code](files/sample.json?download=1).
-
-  *IMPORTANT: do not include zip files, CSV, PDF, PSD, JAR, WAR, EAR, bin or exe files - you must have those objects stored somewhere else. We highly recommend using Oracle Cloud Object Store and creating a PAR URL instead. See [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)*
-
-3. Conditional content example (type="livelabs")
-
-    Select your compartment. <if type="livelabs">If you are using a LiveLabs environment, be sure to select the compartment provided by the environment. Leave Always Free unchecked,</if><if type="alwaysfree">Choose any compartment, select "Always Free",</if> and enter `SecretPassw0rd` for the ADMIN password, then click **Create Autonomous Database**.
-
-    ![](images/atp-settings-1.png)
-    <if type="livelabs">![](images/atp-settings-2-notaf.png)</if>
-    <if type="alwaysfree">![](images/atp-settings-2.png)</if>
-    ![](images/atp-settings-3.png)
-
-## Learn More
-
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
-
-## Acknowledgements
-* **Author** - <Name, Title, Group>
-* **Contributors** -  <Name, Group> (optional)
-* **Last Updated By/Date** - <Name, Month Year>
+  Now that we have completed our Channel Sales Dashboard, we name it "Channel Sales" and jump to the next section!
