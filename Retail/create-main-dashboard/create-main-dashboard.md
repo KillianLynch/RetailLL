@@ -36,7 +36,7 @@ This lab assumes you have:
 The following files <if type="external">referenced in [Lab: Initialize Environment](?lab=init-start-oas) should already be downloaded and staged as instructed, as they</if> <if type="desktop"> staged under *`/opt/oracle/stage`*</if> are required to complete this lab.
 - *** use the dva here ***
 
-## Task 1: Data Exploration
+## Task 1: Explore Data
 1. From the browser session you started in [Lab: Initialize Environment](?lab=init-start-oas), Click on the *"Page Menu"* icon identified by the ![](./images/test.png) symbol located in the upper right-hand corner.
 
     ![](./images/asdvff1.png " ")
@@ -61,11 +61,11 @@ Oracle Analytics Server includes its own light weight data preparation capabilit
 8. Once satisfied with the above step, proceed back to the Visualize tab at the top of the screen. **Click** Visualize.
 
 
-## Task 2: Custom Visualizations
+## Task 2: Discover Insights
 The data visualization capabilities in Oracle Analytics Server are extensive, include things like mapping and custom calculations. In this exercise we will use both capabilities: we will create custom calculations based on two available metrics, and we will then display the results on a map.
 
 1. In this first exercise we will create our first visual. Lets view sales by location. Using the visualizations menu on the left side of the pane,
-    - **Control select** "region1 – State" and "region1 – Sales".
+    - **Control select** "State in 'region1' folder" and "Sales in 'region1' folder".
     - **Right click**, select "Pick Visualization".
 
     ![](./images/MD3.png " ")
