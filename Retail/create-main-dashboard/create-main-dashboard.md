@@ -108,7 +108,7 @@ Here we are gaining an understanding of our on time delivery percentage by chann
 
 
     ![create card](./images/create-supply-chain-card.png " ")
-    ![saels, and supply chain cards](./images/complete-supply-chain-card.png " ")
+    ![sales, and supply chain cards](./images/complete-supply-chain-card.PNG " ")
 
       >*Note: Sometimes the tool can be touchy. I find dragging and dropping the visual into a different location first, and then dragging into smaller areas, lets you move things more freely*
 
