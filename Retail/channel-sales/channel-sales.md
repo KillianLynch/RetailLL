@@ -1,8 +1,10 @@
+#Channel Sales
+
 ## Introduction
 
-*This lab walks you through the Steps to better understand sales performance through visualizations that blend data from ERP, CX, and POS.*
+This lab walks you through the steps to better understand sales performance through visualizations that blend data from ERP, CX, and POS.
 
-Estimated Time: 20 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
@@ -11,8 +13,8 @@ Today, we will be utilizing Oracle Analytics Server ability to pull cross-functi
 In this lab, you will:
 * Create a Stacked Bar Chart
 * Create a Treemap
-* Create Tag Cloud
 * Create Bar Chart
+* Create Tag Cloud
 * Analyze Sentiment
 
 ### Prerequisites
@@ -24,75 +26,107 @@ This lab assumes you have:
 
   > **Note:** If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
 
-## Task 1: Create Stacked Bar Chart
+## **Task 1:** Create Stacked Bar Chart
 
-1. Let’s start by adding a new canvas. Click on the "+" icon at the bottom to create a new canvas. Let’s start visualizing!
+1. To begin you will select the plus symbol to open an empty canvas so that we can build out this project. So, let’s get right into it!
 
-    ![](images/nc1.png)
+    ![New Canvas](images/add-canvas.png)
 
-2. First, let’s see how sales are split across the different channels within the "Underlying Dashboard Data 1."
+2. First, let’s see how sales are split across the different channels within the "Underlying DashBoard Data - 1."
 
-    ![Image alt text](images/1Step2.png")
+    ![Control Click Data](images/select-data.png")
 
-    * **Control select** "Sales – Channel by Quarter."
-    * **Select** Stacked Bar Chart
+    * **Control Select** "Sales by Channel" and then navigate to "Quarter" within Date
 
-3. Now we can see the sales broken down by each individual channel for the past couple of quarters. In Store and Delivery seem to be the biggest contributors to sales, but we need to investigate this further.
+    ![Choose Chart Type](images/select-metrics.png")
 
-    ![Image alt text](images/1Step3.png")
+    * **Right Click** and Select "Stacked Bar Chart."
 
-4. Let's filter out the years that are not relevant to the visual by dragging Date(Quarter) to the filter tab and select quarters in 2020 - 2021.
+3. Now we can see the sales broken down by each individual channel for the past couple of quarters. In Store and Delivery seem to be the biggest contributors to sales, but we need to investigate these values further.
 
-    ![Image alt text](images/1Step4.png")
+    ![Bar Chart](images/bar.png")
+
+4. Let's filter out the years that are not relevant to the visual by dragging Date(Quarter) to the filter tab and **select** quarters in 2020 - 2021.
+
+    ![Filter](images/filtered-bar.png")
 
   Now we have the correct stacked bar chart of sales by channel!
 
+## **Task 2:** Create a Treemap
 
-## Task 2: Create a Treemap
+1. On the same dashboard, let's continue visualizing the dataset by inspecting survey data that was collected.
 
-1. On the same dashboard, let's continue visualizing the dataset by inspecting the survey data that was collected on sales.
+    ![Survey Data](images/survey.png")
 
-    ![Image alt text](images/2Step1.png")
-
-    * **Control select** "Menu Items by Survey Count," the same way we did previously and make sure Menu Items is under color.
-    * **Select** Treemap.
-    * Make sure to also drag Menu Items to color in order to color code the top responses.
+    * **Control Select** "Menu Items by Survey Count," the same way we did previously.
+    * **Right Click** and Select "Treemap."
+    * Make sure to also drag "Menu Items" to color in order to color code the top responses.
 
 2. Now we have a visual that breaks down the different surveys we collect by menu items. We can see that our top 5 menu categories, where fries and hamburger meals top the list - not surprising as this QSR is known for their fries.
 
-    ![Image alt text](images/2Step2.png")
+    ![Image alt text](images/treemap.png")
 
-## Task 3: Create a Tag Cloud
+## **Task 3:** Create a Bar Chart
 
-1. From these survey responses, let's continue by inspecting the leading indicators of customer sentiment.
+1. From these survey responses, let's continue by analyzing the different kinds of sentiment that was derived.
 
-      ![Image alt text](images/3Step1.png")
+    ![Analyze Sentiment](images/sentiment.png")
 
-      * **Control select** "Survey Count by Actual Sentiment," the same way we did previously
-      * **Select** Tag Cloud.
-      * Make sure to also drag Actual Sentiment to color in order to color code the top responses.
+    * This time we will **Control Select** "Derived Sentiment by S-Counter,"
+    * **Select** Create Best Visualization.
+    * This will autonomously create a Bar Chart for us based on the metrics selected.
+    * Also make sure to filter out any nulls in this visual and the next if you have them.
 
-2. Now we have a visual that breaks down the top leading indicators of customer sentiment.
+2. Now we have a visual that breaks down the different instances of each sentiment.
 
-      ![Image alt text](images/3Step2.png")
+    ![Bar Chart](images/bar-chart.png")
 
-## Task 4: Create a Bar Chart
+## **Task 4:** Create a Tag Cloud
 
-  1. Let's finish up by creating a simple bar chart to summarize our sentiment analysis.
+1.  Let's finish up by creating a tag cloud to summarize the leading responses to each customer sentiment.
 
-      ![Image alt text](images/4Step1.png")
+    ![Tag Cloud](images/tag-cloud.png")
 
-      * This time we will **control select** "Derived Sentiment by S-Counter," and select pick visualization.
-      * This will autonomously **select** a Bar Chart for us based on the metrics selected.
+    * **Control Select** "Survey Count by Actual Sentiment."
+    * **Select** "Tag Cloud."
 
-  2. Now we have a visual that breaks down the different instances of each sentiment.
+    * Make sure to also drag "Derived Sentiment" to color in order to color code by sentiment.
 
-      ![Image alt text](images/4Step2.png")
+    ![Color Code](images/responses.png")
 
-## Task 5: Analyze Sentiment
+    * In order to also have accurate representations of color sentiment we can **Select** "Manage Assignments."
 
-  Customer survey responses are displayed on the bottom in two visualizations. The detail on the left showing the leading indicators of customer sentiment from the 1100 survey responses in the last week - fortunately, as we see on the right, the majority are positive or neutral, but there are negative responses mostly around long wait times and being out of fries, not good.  But, glad to see people prefer our cooking over their own.
+    ![Manage Color Assignments](images/manage-assignments.png")
 
-  ![Image alt text](images/HomePage.png")
+    * Then we can change the colors to red for "Negative," yellow for "Neutral," and blue for "Positive."
 
-  Now that we have completed our Channel Sales Dashboard, we name it "Channel Sales" and jump to the next section!
+    ![Colors](images/colors.png")
+
+2. Now we have a visual that breaks down the top responses of customer surveys such as "Always Out of Fries, Long Wait Time, and Beats My Cooking" by sentiment.
+
+    ![Sentiment](images/top-responses.png")
+
+## **Task 5:** Analyze Sentiment
+
+1. Let's wrap up this dashboard with a quick encompassing filter that can help us interact with the different sentiments.
+
+    * **Select** the hamburger menu at the top right of the bar chart in the bottom left corner.
+    * **Select** "Use as Filter."
+
+    ![Use As Filter](images/filter.png")
+
+2. Next we can **Select** "Negative" bar to bring up only negative sentiment results from the dashboard. This shows all the relevant information within the dashboard that has a negative sentiment, revealing the key responses for it - "Long Wait Time and Always Out of Fries."
+
+    ![Negative Sentiment](images/negatives.png")
+
+3. In summary, Customer survey responses are displayed in the bottom two visualizations within the dashboard. The detail on the left showing the leading indicators of customer sentiment from the 1100 survey responses in the last week - fortunately, as we see on the right, the majority are positive or neutral, but there are also a large amount of negative responses mostly around long wait times and being out of fries, not good. But, glad to see people prefer our cooking over their own in our retail stores!
+
+    ![Channel Sales Dashboard](images/dashboard.png")
+
+4. Now that we have completed our Channel Sales Dashboard, we can name it "Channel Sales." You may now **proceed to the next lab.**
+
+## Acknowledgements
+
+  * **Author** - Luke Wheless
+  * **Contributers** - Killian Lynch, Nagwang Gyamtso, & Akash Dharamshi
+  * **Last Updated** - 2/10/22

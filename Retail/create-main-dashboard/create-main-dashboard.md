@@ -99,10 +99,14 @@ Here we are gaining an understanding of our on time delivery percentage by chann
 
     ![picking the filters](./images/pick-filters.png " ")
 
-11. To create our "Card", **Click** and drag Supply Chain Underlying Dashboard Data - On Time Delivery" so that the blue bar appears above the new visual. *Note: Sometimes the tool can be touchy. I find dragging and dropping the visual into a different location first, and then dragging into smaller areas, lets you move things more freely*
+11. To create our "Card", **Click** and drag Supply Chain Underlying Dashboard Data - On Time Delivery" so that the blue bar appears above the new visual.
+
 
     ![create card](./images/create-supply-chain-card.png " ")
     ![saels, and supply chain cards](./images/complete-supply-chain-card.png " ")
+
+      >*Note: Sometimes the tool can be touchy. I find dragging and dropping the visual into a different location first, and then dragging into smaller areas, lets you move things more freely*
+
 Select "Save" in the top right of the screen to save and update your project.
 
 12. In this exercise we will create a custom calculations and two more custom visuals to create our HR analysis cards in order analyze salary and the relationship to company headcount.
@@ -111,12 +115,13 @@ Select "Save" in the top right of the screen to save and update your project.
 
     ![creating calculation](./images/creating-calculation.png " ")
 
-14. Now we will create a new metric called "Previous Year - Salary & Wage". Notice there are a wide range of functions available for creating custom calculations using the expression builder. We are going to use the code snippet below. Feel free explore the expression builder and create the calculation that way. In the box below the name of our new calculation, copy and paste the following. *Note: The arguments in our calculation appear as full path names but are shortened when added into the calculation box of OAS. If confused use the picture below to make sure your custom calculation matches.*
+14. Now we will create a new metric called "Previous Year - Salary & Wage". Notice there are a wide range of functions available for creating custom calculations using the expression builder. We are going to use the code snippet below. Feel free explore the expression builder and create the calculation that way. In the box below the name of our new calculation, copy and paste the following.
 
         <copy>(FILTER(XSA('weblogic'.'Financial (1)')."Columns"."Previous Year - Operating Expenses" USING XSA('weblogic'.'Financial (1)')."Columns"."Account Group"='Salary & Wage'))</copy>
 
     ![custom calculation](./images/custom-calculation.png " ")
-
+    >*Note: The arguments in our calculation appear as full path names but are shortened when added into the calculation box of OAS. If confused use the picture below to make sure your custom calculation matches.*
+    
 15. **Click** Validate. **Click** Save.
 You have successfully created your own custom calculation that can be used like any other metric.
 
