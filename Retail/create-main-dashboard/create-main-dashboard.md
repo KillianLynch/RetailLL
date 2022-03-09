@@ -79,7 +79,7 @@ Right away we can see that the north east region sales is severely behind the re
     ![drag and drop sales above visual](./images/drag-and-drop-sales.png " ")
     ![sales card](./images/sales-card.png " ")
 
-6. Now we are going to format our value using the properties box (in the bottom right of the screen). **Select** select the Values '#' tab and we are going to change from auto to currency as well as turn on abbreviate by selecting it.
+6. Now we are going to format our value using the properties box (in the bottom right of the screen). **Select** the Values '#' tab and we are going to change from auto to currency as well as turn on abbreviate by selecting it.
 
   ![formatting the currency](./images/formatting-the-currency.png " ")
   ![abbreviate the currency](./images/abbreviate-the-currency.png " ")
@@ -142,7 +142,7 @@ You have successfully created your own custom calculation that can be used like 
 
     ![creating HR card](./images/hr-card.png " ")
 
-18. Within the properties box (in the bottom right of the screen) select the Values '#' tab and we are going to change the number format to currency.
+18. Within the properties box (in the bottom right of the screen)  **select** the Values '#' tab and we are going to change from auto to currency as well as turn on abbreviate by selecting it.
 
     ![formatting the currency](./images/formatting-the-currency.png " ")
     ![abbreviate the currency](./images/abbreviate-the-currency.png " ")
