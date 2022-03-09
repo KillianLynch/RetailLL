@@ -79,13 +79,18 @@ Right away we can see that the north east region sales is severely behind the re
     ![drag and drop sales above visual](./images/drag-and-drop-sales.png " ")
     ![sales card](./images/sales-card.png " ")
 
-6. Now we are going to create our second card. Open the Supply Chain Underlying Dashboard Data and
+6. Now we are going to format our value using the properties box (in the bottom right of the screen). **Select** select the Values '#' tab and we are going to change from auto to currency as well as turn on abbreviate by selecting it.
+
+  ![formatting the currency](./images/formatting-the-currency.png " ")
+  ![abbreviate the currency](./images/abbreviate-the-currency.png " ")
+
+7. Now we are going to create our second card. Open the Supply Chain Underlying Dashboard Data and
     - **Control select** "Supply Chain Underlying Dashboard Data - On Time Delivery" and "Supply Chain Underlying Dashboard Data - Channel".
     - **Right click**, select "Pick Visualization"
 
     ![create supply chain card](./images/supply-chain-card.png " ")
 
-7. **Select** "Stacked Bar".
+8. **Select** "Stacked Bar".
 
     ![pick stacked bar chart](./images/stacked-bar.png " ")
 
@@ -121,7 +126,7 @@ Select "Save" in the top right of the screen to save and update your project.
 
     ![custom calculation](./images/custom-calculation.png " ")
     >*Note: The arguments in our calculation appear as full path names but are shortened when added into the calculation box of OAS. If confused use the picture below to make sure your custom calculation matches.*
-    
+
 15. **Click** Validate. **Click** Save.
 You have successfully created your own custom calculation that can be used like any other metric.
 
@@ -140,6 +145,7 @@ You have successfully created your own custom calculation that can be used like 
 18. Within the properties box (in the bottom right of the screen) select the Values '#' tab and we are going to change the number format to currency.
 
     ![formatting the currency](./images/formatting-the-currency.png " ")
+    ![abbreviate the currency](./images/abbreviate-the-currency.png " ")
 
 19. For our last card we are going to analyze Headcount by Quarter to compare with our Salary & Wage by Quarter analysis.
     - **Control select** 'Underlying HR Dashboard copy - Date' and 'Underlying HR Dashboard copy - Headcount'

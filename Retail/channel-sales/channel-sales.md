@@ -127,6 +127,6 @@ This lab assumes you have:
 
 ## Acknowledgements
 
-  * **Author** - Luke Wheless
-  * **Contributers** - Killian Lynch, Nagwang Gyamtso, & Akash Dharamshi
-  * **Last Updated** - 2/10/22
+* **Authors** - Killian Lynch, Nagwang Gyamtso, Luke Wheless, Akash Dharamshi, Solution Engineer Specialist Hub Team, NA Technology
+* **Contributors** - Luke Wheless, Solution Engineer Specialist Hub Team, NA Technology
+* **Last Updated By/Date** - Luke Wheless, Solution Engineer Specialist Hub Team, NA Technology, March 2022
