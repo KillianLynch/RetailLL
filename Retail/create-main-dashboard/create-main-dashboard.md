@@ -37,7 +37,7 @@ The following files <if type="external">referenced in [Lab: Initialize Environme
 - *** use the dva here ***
 
 ## **Task 1:** Data exploration
-1. From the browser session you started in the  Initialize environment lab, **click** on the *"Page Menu"* icon identified by the ![Page menu icon](./images/page-menu.png) symbol located in the upper right-hand corner.
+1. From the browser session you started in the  Initialize environment lab, **click** on the *"Page Menu"* icon identified by the ![Page menu icon](./images/page-menu.PNG) symbol located in the upper right-hand corner.
 
 2. **Click** on Import Project/Flow... to upload the file used in the .
 
@@ -48,7 +48,7 @@ The following files <if type="external">referenced in [Lab: Initialize Environme
 5. **Select** the Bobby's Burgers & Fries icon from under the Projects section.  
 
 6. You will be presented with an empty canvas. Let’s start visualizing! First, **click** on the Prepare tab at the top of the screen. Here is where we can see all of the data that Bobby's Burgers & Fries will be working with.
-    ![OAS Visualize page](./images/mian-dashboard-visualize-tab.png " ")
+    ![OAS Visualize page](./images/mian-dashboard-visualize-tab.PNG " ")
 Oracle Analytics Server includes its own light weight data preparation capabilities. When you import the spreadsheet, you will navigate to the preparation tab before adding the data to the project.  Here you can make some modifications to the data elements or make modifications to your data based upon any recommendations Oracle Analytics knowledge service suggests.  Additionally, you can define a relationship between the subject areas in order to join the data sources for further analysis.
 
 7. **Select** the data diagram tab from the bottom of the screen to visualize the relationship between the data sets. You can view all the relationships as well as navigate through the different data sets to get an understanding of what we will be working with.
@@ -71,13 +71,13 @@ The data visualization capabilities in Oracle Analytics Server are extensive, in
 
 3. Observe the map on the canvas. You can see the sales by region across the US.
 
-    ![sales by region on the map](./images/sales-by-region.png " ")
+    ![sales by region on the map](./images/sales-by-region.PNG " ")
 
 Right away we can see that the north east region sales is severely behind the rest of the country. We will dig deeper and find out why that is in the next lab. For now lets continue to build out our main dashboard.
 
 5. Next we want to create individual 'cards' for the different KPIs we are going to be measuring. **Click** and **drag** "regions1 - Sales" measure above the map visual you just created. A dark blue line appears.  It identifies the location of your visualization. You may drop the visualization to the left, right, top or bottom. In our case we will drop the visual on top of the one we just created.
     ![drag and drop sales above visual](./images/drag-and-drop-sales.png " ")
-    ![sales card](./images/sales-card.png " ")
+    ![sales card](./images/sales-card.PNG " ")
 
 6. Now we are going to format our value using the properties box (in the bottom right of the screen). **Select** the Values '#' tab and we are going to change from auto to currency as well as turn on abbreviate by selecting it.
 
@@ -88,7 +88,7 @@ Right away we can see that the north east region sales is severely behind the re
     - **Control select** "Supply Chain Underlying Dashboard Data - On Time Delivery" and "Supply Chain Underlying Dashboard Data - Channel".
     - **Right click**, select "Pick Visualization"
 
-    ![create supply chain card](./images/supply-chain-card.png " ")
+    ![create supply chain card](./images/supply-chain-card.PNG " ")
 
 8. **Select** "Stacked Bar".
 
@@ -140,7 +140,7 @@ You have successfully created your own custom calculation that can be used like 
 
 17. Next, **Click** and **drag** 'My Calculations - Previous Year - Salary & Wage' above new visual.
 
-    ![creating HR card](./images/hr-card.png " ")
+    ![creating HR card](./images/hr-card.PNG " ")
 
 18. Within the properties box (in the bottom right of the screen)  **select** the Values '#' tab and we are going to change from auto to currency as well as turn on abbreviate by selecting it.
 
@@ -159,12 +159,12 @@ You have successfully created your own custom calculation that can be used like 
 
 21. Now, **Drag** and **drop** the visual we just created by the 'Previous Year - Salary & Wage by Quarter' visual.
 
-    ![moving the visual](./images/moving-line-visual.png " ")
+    ![moving the visual](./images/moving-line-visual.PNG " ")
 
 22. To finish the 'Headcount by Date' card. **Drag** and **drop** the 'Underlying HR Dashboard copy - Headcount' Measure above the visual we just created. Select "Save" to save and update your project.
 
     ![drag and drop headcount](./images/drag-headcount.png " ")
-    ![showing all visuals](./images/headcount-card.png " ")
+    ![showing all visuals](./images/headcount-card.PNG " ")
 
 You have now finished the Main Dashboard creation. Next we will take a closer look at our sales. You may now **proceed to the next Lab.**
 
