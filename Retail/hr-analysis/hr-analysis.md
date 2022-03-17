@@ -14,130 +14,132 @@ In this lab, you will:
 * Analyze turnover by department and create trend lines
 * Create a word cloud to understand reasons for attrition
 * Create a scatter plot to understand the distribution of employees by age, salary, and department
-* [relative lab url test](?lab=need-help)
+
 
 ### Prerequisites
 
 This lab assumes you have:
 * All previous labs successfully completed
 
-  > **Note:** If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
-
-*This is the "fold" - below items are collapsed by default*
-![](images/ "")
-
-## Task 1: Using Forecasts to make predictions
+## **Task 1:** Create Payroll Forecast
 
 <!-- Images -->
 In this exercise, we are going to create a 12 month forecast using OAS's built in ML capabilities to help us predict where our payroll trends are heading.
 
 1. **Create** a new canvas and **rename** it "HR Analysis"
 
-    ![Create new canvas](images/1create-canvas.png "Create new canvas")
-    ![Rename canvas](images/2rename-canvas.png "Rename canvas")
+    ![Create new canvas](images/create-canvas.png "Create new canvas")
+    ![Rename canvas](images/rename-canvas.png "Rename canvas")
 
-2. From the "OAX_PL_Payroll" dataset, **Control select** 'Base Salary' and 'Overtime Cost'. **Right click** and **select** "Pick Visualization" and **select** the Bar chart.
+2. From the **"OAX PL Payroll"** dataset, **Control select** and choose **'Base Salary'** and **'Overtime Cost'**.
 
-    ![Create bar chart](images/3create-bar-chart.png "Create bar chart")
+   **Right click** and select **'Pick Visualization'** and **select the Bar chart.**
 
-3. From the grammar pane, **drag** 'Overtime Cost' and **place** it in the Values box under 'Base Salary'.
+    ![Create bar chart](images/create-bar-chart.png "Create bar chart")
 
-    ![Select Overtime Cost](images/4select-overtime-cost.png "Select Overtime Cost")
-    ![Move Overtime Cost](images/5move-overtime-cost.png "Move Overtime Cost")
+3. From the grammar pane, **drag** the **'Overtime Cost'** attribute and place it in the Values box under **'Base Salary'.**
 
-4. Now lets **select** 'Month' and **drag** it in the Category section.
+    ![Select Overtime Cost](images/select-overtime-cost.png "Select Overtime Cost")
+    ![Move Overtime Cost](images/move-overtime-cost.png "Move Overtime Cost")
 
-    ![Drag Month](images/6add-month.png "Add month")
+4. Now lets **select**  the **'Month'** attribute and **drag** it in the **Category** section.
 
-5. You have now just created a bar chart that compares Base Salary and Overtime Costs by Month. Let's apply quick and easy advanced analytics to this visual to help us understand the trend and forcase of this cost comparison.
+    ![Drag Month](images/add-month.png "Add month")
 
-6. **Right click** the visual and **select** 'Add Statistics' and then **select** 'Trendline'.
-  ![Add trendline](images/7add-trendline.png "Add Trendline")
+5. You have now just created a bar chart that compares Base Salary and Overtime Costs by Month. Let's apply quick and easy advanced analytics to this visual to help us understand the trend and forecast of this cost comparison.
 
-7.  **Right click** the visual and **select** 'Add Statistics' and then **select** 'Forecast'. This will create a forecast into the next 3 periods (months) by default.
+6. **Right click** the visual and **select** the **'Add Statistics'** attribute and then **select** the **'Trendline'** option.
+  ![Add trendline](images/add-trendline.png "Add Trendline")
 
-  ![Add forecast](images/8add-forecast.png "Add Forecast")
+7.  **Right click** the visual and **select** the **'Add Statistics'** option and then **select** the **'Forecast'** option. This will create a forecast into the next 3 periods (months) by default.
 
-8. We are more interested in seeing the forecast for the next 12 months so lets **click** the analytics tab in the Data Pane and **change** the 'Periods' to '12'.
+  ![Add forecast](images/add-forecast.png "Add Forecast")
 
-  ![Edit forecast](images/10.1edit-forecast.png "Edit Forecast")
+8. We are more interested in seeing the forecast for the next 12 months so lets **click** the analytics tab in the Data Pane and **change** the **'Periods'** to **'12'**.
+
+  ![Edit forecast](images/edit-forecast.png "Edit Forecast")
 
   Immediately you're presented with an updated visualization and results show that over a period of 12 months if this trend continues, payroll costs will continue to increase exponentially and will put major pressure on margins.
 
+## **Task 2:** Compare Voluntary Turnover by Department
 
-9. Lets now create a line graph of Voluntary Turnover by Fiscal Period and Department to help us understand the changes in turnover. **Control select** 'Voluntary Turnover', 'Department', and 'Fiscal Period' from the 'HCMLeavers' data set and **drag** it into the canvas under the bar graph we just created.
+1. Lets now create a line graph of Voluntary Turnover by Fiscal Period and Department to help us understand the changes in turnover. **Control select** and choose **'Voluntary Turnover'**, **'Department'**, and **'Fiscal Period'** from the **"HCMLeavers"** data set and **drag** it into the canvas under the bar graph we just created.
+    ![Create line graph](images/create-line-graph.png "Create line graph")
+    Your canvas should now look like this:
+    ![Line graph result](images/line-graph-result.png "Line graph result")
 
-![Create linegraph](images/12create-line-graph.png "Create Linegraph")
+2. **Right click** and add a **trend line** like we did earlier.
 
-Your canvas should now look like this:
+  ![Add trend line](images/add-trend-line-graph.png "Add trend line")
+  ![Trend line result](images/trend-line-result.png "Trend line result")
 
-![Line graph result](images/13line-graph-result.png "Linegraph result")
+  The resulting trend line shows us that Voluntary Turnover is steadily increasing overall but there was a spike in July for Line Cooks just as there was a spike in Overtime Cost in July.
 
-9. **Right click** and add a trendline like we did earlier.
+## **Task 3:** Create a Tag Cloud to Understand Reasons for Turnover
 
-  ![Add trendline](images/14add-trend-line-graph.png "Add trendline")
-  ![Trendline result](images/15trend-line-result.png "Trendline result")
+1. Let's now use customer survey responses for Voluntary Turnover and build a Tag Cloud to help us understand reasons for why employees are leaving. **Control select** and choose **'Reason'** and **'Voluntary Turnover'** from **"HCMLeavers"**.
 
-The resulting trend line shows us that Voltuntary Turnover is steadily increasing overall but there was a spike in July for Line Cooks just as there was a spike in Overtime Cost in July.
+  **Right click** and select **'Pick Visualization'** and **select** the **Tag Cloud**.
 
-10. Let's now use customer survey responses for Voluntary Turnover and build a Tag Cloud to help us understand reasons for why employees are leaving. **Control select** 'Reason' and 'Voluntary Turnover' from 'HCMLeavers', **right click** and select 'Pick Visualization' and **select** the Tag Cloud.
-
-  ![Create Tag Cloud](images/16create-tag-cloud.png "Create tag cloud")
-
-
-11. Now **select** 'Voluntary Turnover' from 'HCMLeavers' and **drag** it into the Color section.
-
-
-  ![Edit tag cloud](images/17tagcloud-color.png "Edit tag cloud")
+  ![Create Tag Cloud](images/create-tag-cloud.png "Create tag cloud")
 
 
-12. Let's shift our visualizations around for a better layout. **Hover** over the title of the Tag Cloud until you see the four corner arrows and **click and drag** the Tag Cloud to the right of the Salary vs. Overtime cost bar chart.
+2. Now **select** the **'Voluntary Turnover'** attribute from **"HCMLeavers"** and **drag** it into the **Color** section.
+  ![Edit tag cloud](images/tagcloud-color.png "Edit tag cloud")
 
-  ![Move Tag cloud](images/18move-tagcloud.png "Move Tag Cloud")
-  ![Move Tag cloud right](images/19move-tagcloud-right.png "Move Tag Cloud right")
 
-The result should look like this:
+3. Let's shift our visualizations around for a better layout. **Hover** over the title of the **Tag Cloud** until you see the four corner arrows.
 
-  ![Tag cloud result](images/20tagcloud-move-result.png "Tag cloud result")
+  Then, **click and drag** the **Tag Cloud** to the right of the Salary vs. Overtime cost bar chart.
 
-Based on the Tag Cloud, we see that the top three reasons for voluntary attrition was because our employees want higher pay rates, better opportunities, and a better work-life balance.
+  ![Move Tag cloud](images/move-tagcloud.png "Move Tag Cloud")
+  ![Move Tag cloud right](images/move-tagcloud-right.png "Move Tag Cloud right")
 
-13. Now let's create the final visualization which is a scatter plot to help us understand the relationship between the age and salaries of our employees by department. **Control select** 'Department', 'Employee ID', 'Age' and 'Salary' from 'HCMLeavers'. Then, **drag and drop** the selected columns to the right of the Tag Cloud we just created.
+  The result should look like this:
 
-  ![Create Scatter Plot](images/22drag-scatter-canvas.png "Create scatter plot")
+  ![Tag cloud result](images/tagcloud-move-result.png "Tag cloud result")
 
-The result should look like this:
+  Based on the Tag Cloud, we see that the top three reasons for voluntary attrition was because our employees want higher pay rates, better opportunities, and a better work-life balance.
 
-  ![Scatter Plot Result](images/23scatter-result.png "Scatter plot result")
+## **Task 4:** Create a Scatter Plot to Understand Age and Salary Distribution
 
-14. In the grammar pane, **switch** 'Department' and 'Employee ID' so that 'Department' is in the Color section and 'Employee ID' is in the Category section.
+1. Now let's create the final visualization which is a scatter plot to help us understand the relationship between the age and salaries of our employees by department.
 
-  ![Edit scatter attributes](images/24edit-scatter-attributes.png "Edit attributes")
+  **Control select** the **'Department'**, **'Employee ID'**, **'Age'** and **'Salary'** from **"HCMLeavers"**.
 
-15. **Navigate** to the Data Pane on the bottom left of your screen and **click** on the Axix tab. **Find** the 'Start' option and **change** it to 'Min Data'.
+  Then, **drag and drop** the selected columns to the right of the Tag Cloud we just created.
 
-  ![Edit scatter axis](images/25edit-scatter-axis.png "Edit scatter axis")
+  ![Create Scatter Plot](images/drag-scatter-canvas.png "Create scatter plot")
+  The result should look like this:
 
-16. **Move** the legend to the right for better positioning by **clicking** on the General tab and **changing** the 'Legend' option to 'Right'.
+  ![Scatter Plot Result](images/scatter-result.png "Scatter plot result")
 
-  ![Edit scatter legend](images/26edit-scatter-legend.png "Edit scatter legend")
+2. In the grammar pane, **switch** the **'Department'** and **'Employee ID'** so that **'Department'** is in the **Color** section and **'Employee ID'** is in the **Category** section.
 
-Your canvas should now look like this:
+  ![Edit scatter attributes](images/edit-scatter-attributes.png "Edit attributes")
 
-  ![Result after scatter](images/27result-after-scatter.png "Result after scatter")
+3. **Navigate** to the **Data Pane** on the bottom left of your screen and **click** on the **Axis** tab. **Find** the **'Start'** option and **change** it to **'Min Data'**.
 
-17. Lets improve the position of the visualizations so that our charts are easier to read. **Drag** the Tag Cloud on top of the Scatter Plot and **drop** it once a solid blue line appears above the Tag Cloud.
+  ![Edit scatter axis](images/edit-scatter-axis.png "Edit scatter axis")
 
-![Re-arrange charts](images/28move-tagcloud-above-scatter.png "Re-arrange charts")
+4. **Move** the legend to the right for better positioning by **clicking** on the **General tab** and **changing** the **'Legend'** option to **'Right'**.
 
-18. Save your analysis. Our final canvas should now look like this:
-![Final canvas](images/30final-dashboard.png "Final canvas")
+  ![Edit scatter legend](images/edit-scatter-legend.png "Edit scatter legend")
+  Your canvas should now look like this:
 
-19. Based on our analysis and prediction of Base Salary vs. Overtime Cost we learned that if this trend continues, it will put pressures on our margins. We also learned that a spike in turnover within our line cooks resulted in the spike in overtime costs in July. From the tag cloud, we discovered the top 3 reasons for why our employees are voluntarily leaving and finally we were able to understand the relationship between the age and salary of our employees within each department.
+  ![Result after scatter](images/result-after-scatter.png "Result after scatter")
 
-Our executives now need to put together a strategy to retain existing employees and fill the open positions as soon as possible. By doing so, payroll costs will be normalized, headcount will be restored, and her customers won't experience long wait times anymore.
+5. Lets improve the position of the visualizations so that our charts are easier to read. **Drag** the **Tag Cloud** on top of the **Scatter Plot** and **drop** it once a solid blue line appears above the Tag Cloud.
+  ![Re-arrange charts](images/move-tagcloud-above-scatter.png "Re-arrange charts")
 
-**This concludes the lab**
+6. **Save** your analysis. Our final canvas should now look like this:
+  ![Final canvas](images/final-dashboard.png "Final canvas")
+
+  Based on our analysis and prediction of Base Salary vs. Overtime Cost we learned that if this trend continues, it will put pressures on our margins. We also learned that a spike in turnover within our line cooks resulted in the spike in overtime costs in July. From the tag cloud, we discovered the top 3 reasons for why our employees are voluntarily leaving and finally we were able to understand the relationship between the age and salary of our employees within each department.
+
+  Our executives now need to put together a strategy to retain existing employees and fill the open positions as soon as possible. By doing so, payroll costs will be normalized, headcount will be restored, and her customers won't experience long wait times anymore.
+
+  **This concludes the lab**
 
 
 ## Learn More
